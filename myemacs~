@@ -1,0 +1,40 @@
+;;emacs code browser
+;;require ecb things
+;;(add-to-list 'load-path "~/.emacs.d/plugins/cedet/eieio")
+;;(add-to-list 'load-path "~/.emacs.d/plugins/cedet/speedbar")
+;;(add-to-list 'load-path "~/.emacs.d/plugins/cedet/semantic")
+;;(setq semantic-load-turn-everything-on t)
+;;(require 'semantic-load)
+
+;;(add-to-list 'load-path "~/.emacs.d/plugins/ecb-snap/")
+;;(require 'ecb)
+
+
+;;in the .emacs
+(require 'ido)
+(ido-mode t)
+(setq ido-enable-flex-matching t)
+
+;;tramp
+(add-to-list 'load-path "~/.emacs.d/plugins/")
+(require 'ssh-agent)
+(setq tramp-default-method "ssh")
+
+
+;; scala
+(setq load-path (cons "~/.emacs.d/plugins/scala" load-path))
+
+(require 'scala-mode-auto)
+
+;;move the mouse when typing over
+(mouse-avoidance-mode 'cat-and-mouse)
+
+;;smart-compile
+(setq load-path (cons "~/.emacs.d/plugins/" load-path))
+
+;;css
+(setq load-path (cons "~/.emacs.d/plugins/css/" load-path))
+(autoload 'css-mode "css-mode" "Mode for editing CSS files" t)
+
+;;yasnippet
+(require 'yasnippet-bundle)
